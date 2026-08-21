@@ -5123,8 +5123,8 @@
         id: "rein_gold_fountain",
         name: "無限の金脈",
         icon: "💰",
-        desc: "正解時獲得PTを圧倒的に増加 (+50,000 PT / Lv)",
-        getStatText: (lvl) => `正解PT +${(lvl * 50000).toLocaleString()} PT`,
+        desc: "正解時獲得PTを圧倒的に増加 (+3000 PT / Lv)",
+        getStatText: (lvl) => `正解PT +${(lvl * 3000).toLocaleString()} PT`,
         getCost: (lvl) => 1 + lvl * 2
       }
     ];
@@ -5502,7 +5502,7 @@
       const highVal = getStatValue('high_pendant', getEffectiveLevel('high_pendant'));
       const reinBlessingBonus = (playerEquipmentLevels.rein_blessing || 0) * 5.0;
       const crownVal = getStatValue('overkill_crown', getEffectiveLevel('overkill_crown')) + (playerEquipmentLevels.gacha_crown || 0) * 0.1 + reinBlessingBonus;
-      const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 50000;
+      const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 3000;
       const bootsVal = getStatValue('boots', getEffectiveLevel('boots')) + reinGoldBonus;
       const speedWindow = 2.0 + (playerEquipmentLevels.gacha_speed_window || 0) * 0.1;
       const adv = getAdvancedStatusValues();
@@ -5544,7 +5544,7 @@
       const highVal = getStatValue('high_pendant', getEffectiveLevel('high_pendant'));
       const reinBlessingBonus = (playerEquipmentLevels.rein_blessing || 0) * 5.0;
       const crownVal = getStatValue('overkill_crown', getEffectiveLevel('overkill_crown')) + (playerEquipmentLevels.gacha_crown || 0) * 0.1 + reinBlessingBonus;
-      const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 50000;
+      const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) *3000;
       const bootsVal = getStatValue('boots', getEffectiveLevel('boots')) + reinGoldBonus;
       const ringVal = getStatValue('ring', getEffectiveLevel('ring'));
       const speedWindow = 2.0 + (playerEquipmentLevels.gacha_speed_window || 0) * 0.1;
@@ -5942,7 +5942,7 @@
         const isMissed = missedWords.some(w => w.en === currentWord.en);
         if (isMissed) missedWords = missedWords.filter(w => w.en !== currentWord.en);
 
-        const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 50000;
+        const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 3000;
         const bootsBonus = getStatValue('boots', getEffectiveLevel('boots')) + reinGoldBonus;
         const ringBonus = getStatValue('ring', getEffectiveLevel('ring'));
         let earnedGold = bootsBonus;
@@ -6275,7 +6275,7 @@
       const highVal = getStatValue('high_pendant', getEffectiveLevel('high_pendant'));
       const reinBlessingBonus = (playerEquipmentLevels.rein_blessing || 0) * 5.0;
       const crownVal = getStatValue('overkill_crown', getEffectiveLevel('overkill_crown')) + (playerEquipmentLevels.gacha_crown || 0) * 0.1 + reinBlessingBonus;
-      const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 50000;
+      const reinGoldBonus = (playerEquipmentLevels.rein_gold_fountain || 0) * 3000;
       const bootsVal = getStatValue('boots', getEffectiveLevel('boots')) + reinGoldBonus;
       const adv = getAdvancedStatusValues();
       const longestWordLen = Math.max(...words.map(w => (w.en || '').replace(/[^a-zA-Z]/g, '').length), 4);
